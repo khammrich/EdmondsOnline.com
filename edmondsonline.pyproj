@@ -30,6 +30,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="edmondsonline\auth\email.py" />
+    <Compile Include="edmondsonline\email.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="edmondsonline\errors\handlers.py" />
     <Compile Include="edmondsonline\errors\__init__.py" />
     <Compile Include="edmondsonline\auth\forms.py" />
@@ -40,6 +43,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="edmondsonline\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="edmondsonline\translate.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="edmondsonline\__init__.py" />
