@@ -29,12 +29,26 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="edmondsonline\auth\email.py" />
+    <Compile Include="edmondsonline\errors\handlers.py" />
+    <Compile Include="edmondsonline\errors\__init__.py" />
+    <Compile Include="edmondsonline\auth\forms.py" />
+    <Compile Include="edmondsonline\auth\routes.py" />
+    <Compile Include="edmondsonline\auth\__init__.py" />
     <Compile Include="edmondsonline.py" />
+    <Compile Include="edmondsonline\cli.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="edmondsonline\__init__.py" />
     <Compile Include="edmondsonline\views.py" />
+    <Compile Include="Config.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="edmondsonline\auth\" />
     <Folder Include="edmondsonline\" />
+    <Folder Include="edmondsonline\errors\" />
     <Folder Include="edmondsonline\static\" />
     <Folder Include="edmondsonline\static\content\" />
     <Folder Include="edmondsonline\static\fonts\" />
