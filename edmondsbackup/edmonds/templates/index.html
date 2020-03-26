@@ -1,0 +1,26 @@
+{% extends 'bootstrap/base.html' %}
+{% block body %}
+    {% block content %}
+        {% block nav %}
+            <header>
+                <div class="navbar mt-0 justify-content-center" style="position: absolute">
+                    <div class="navbar-brand navbar-dark fa-align-left">EDMONDS ONLINE</div>
+                    <div class="nav-item nav-link">
+                        {% for links in nav %}
+                            <a href="{{ links.url }}"><span class="btn-dark bg-transparent">{{ links.name }}</span></a>
+                        {% endfor %}
+                    </div>
+                </div>
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" height="800" style="position: relative; z-index: -1; overflow: hidden">
+                        <source src=../static/media/edtittle_Trim.mp4 type="video/mp4">
+                    </video>
+            </header>
+        {%  endblock nav %}
+
+
+
+    {% endblock content %}
+    {% block scripts %}
+        <script src="https://kit.fontawesome.com/32436a808a.js" crossorigin="anonymous"></script>
+    {% endblock scripts %}
+{% endblock body %}
