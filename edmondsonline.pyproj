@@ -29,6 +29,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="config.py" />
     <Compile Include="edmondsonline\auth\email.py" />
     <Compile Include="edmondsonline\email.py">
       <SubType>Code</SubType>
@@ -42,6 +43,9 @@
     <Compile Include="edmondsonline\cli.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="edmondsonline\main\forms.py" />
+    <Compile Include="edmondsonline\main\routes.py" />
+    <Compile Include="edmondsonline\main\__init__.py" />
     <Compile Include="edmondsonline\models.py">
       <SubType>Code</SubType>
     </Compile>
@@ -50,21 +54,34 @@
     </Compile>
     <Compile Include="edmondsonline\__init__.py" />
     <Compile Include="edmondsonline\views.py" />
-    <Compile Include="config.py">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="edmondsonline\auth\" />
     <Folder Include="edmondsonline\" />
     <Folder Include="edmondsonline\errors\" />
+    <Folder Include="edmondsonline\main\" />
+    <Folder Include="edmondsonline\templates\auth\" />
+    <Folder Include="edmondsonline\templates\email\" />
+    <Folder Include="edmondsonline\templates\errors\" />
+    <Folder Include="edmondsonline\translations\" />
     <Folder Include="edmondsonline\static\" />
     <Folder Include="edmondsonline\static\content\" />
     <Folder Include="edmondsonline\static\fonts\" />
     <Folder Include="edmondsonline\static\scripts\" />
     <Folder Include="edmondsonline\templates\" />
+    <Folder Include="edmondsonline\translations\es\" />
+    <Folder Include="edmondsonline\translations\es\LC_MESSAGES\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="edmondsonline\templates\auth\login.html" />
+    <Content Include="edmondsonline\templates\auth\register.html" />
+    <Content Include="edmondsonline\templates\auth\reset_password.html" />
+    <Content Include="edmondsonline\templates\auth\reset_password_request.html" />
+    <Content Include="edmondsonline\templates\email\reset_password.html" />
+    <Content Include="edmondsonline\templates\email\reset_password.txt" />
+    <Content Include="edmondsonline\templates\errors\404.html" />
+    <Content Include="edmondsonline\templates\errors\500.html" />
+    <Content Include="edmondsonline\translations\es\LC_MESSAGES\messages.po" />
     <Content Include="requirements.txt" />
     <Content Include="edmondsonline\static\content\bootstrap.css" />
     <Content Include="edmondsonline\static\content\bootstrap.min.css" />
