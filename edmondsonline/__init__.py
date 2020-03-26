@@ -11,10 +11,6 @@ from flask_moment import Moment
 from flask_babel import Babel, lazy_gettest as _1
 from config import Config
 
-"""
-Call Packages
-"""
-
 db = SQLAlchemy()
 migrate = Migrate()
 login = LoginManager()
@@ -22,24 +18,18 @@ login.login_view = 'auth.login'
 login.login_message = _l('Please log in to access this page.')
 bootstrap = Bootstrap()
 moment = Moment()
-"""
-Main App creation class
-"""
+
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
-"""
-Initialize apps
-"""
+
     db.init_app(app)
     migrate.init_app(app)
     login.init_app(app)
     bootstrap.init_app(app)
     moment.init_app(app)
-"""
-Blue Prints
-"""
-    from edmondsonline.error import bp as errors_bp
+
+    from edmondsonline.errors import bp as errors_bp
     app.register_blueprint(errors_bp)
 
     from edmondsonline.auth import bp as auth_bp

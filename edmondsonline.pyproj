@@ -39,9 +39,12 @@
     <Compile Include="edmondsonline\cli.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="edmondsonline\models.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="edmondsonline\__init__.py" />
     <Compile Include="edmondsonline\views.py" />
-    <Compile Include="Config.py">
+    <Compile Include="config.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
